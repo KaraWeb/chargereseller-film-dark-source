@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-        webserviceDomain: 'http://chr724-app.ir/api',
+        webserviceDomain: 'https://chr724-app.ir/api',
         requesting: false,
         loadingText: 'در حال بارگذاری...',
         webserviceId: document.getElementById('WebserviceId').value,
