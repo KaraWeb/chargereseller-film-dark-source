@@ -2,6 +2,7 @@ import Vue from 'vue';
 import  Router from 'vue-router';
 import Home from './components/pages/Home.vue';
 import List from './components/pages/List.vue';
+import Search from './components/pages/Search.vue';
 import Details from './components/pages/Details.vue';
 import Verify from './components/pages/Verify.vue';
 
@@ -17,6 +18,11 @@ export default new Router({
             path: "/list/:category",
             name: "list",
             component: List
+        },
+        {
+            path: "/search/:query",
+            name: "search",
+            component: Search
         },
         {
             path: "/view/:type/:id",

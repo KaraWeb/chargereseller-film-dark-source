@@ -66,6 +66,19 @@ const store = new Vuex.Store({
                     })
             });
         },
+        search: function (state,options) {
+            return new Promise((resolve, reject) => {
+                Axios.post(this.state.webserviceDomain + '/movie/search', {query:options.query},{
+                    headers: {}
+                })
+                    .then(response => {
+                        resolve(response);
+                    })
+                    .catch(error => {
+                        reject(error);
+                    })
+            });
+        },
         getMoviesDetails: function (state,options) {
             return new Promise((resolve, reject) => {
                 Axios.post(this.state.webserviceDomain + '/movie/getDetails', {id:options.id,type:options.type},{

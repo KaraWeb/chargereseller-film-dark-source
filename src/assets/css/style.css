@@ -32,12 +32,14 @@ body {
     justify-content: space-between;
     padding: 30px;
     display: flex;
+    flex-direction: row-reverse;
 }
 
 .header-logo {
     display: flex;
     filter: brightness(0) invert(1);
     align-items: center;
+    width: 20%;
 }
 
 .header-logo img {
@@ -240,12 +242,15 @@ body {
     display: flex;
     /*direction: ltr !important;*/
 }
-.owl-item{
+
+.owl-item {
     cursor: pointer;
 }
-.owl-item:first-child{
+
+.owl-item:first-child {
     margin-right: 0 !important;
 }
+
 .owl-stage-outer {
     display: flex;
     /*direction: ltr !important;*/
@@ -274,9 +279,11 @@ body {
     align-items: center;
     justify-content: center;
 }
-.btn:hover{
+
+.btn:hover {
     opacity: 0.8;
 }
+
 .btn i {
     padding-left: 10px;
 }
@@ -285,7 +292,11 @@ body {
     background: #3b0f6b;
     color: #fff;
 }
-
+.btn-transparent {
+    background: none;
+    border: 1px solid #666;
+    color: #fff;
+}
 .btn-secondary {
     background: #d50606;
     color: #fff;
@@ -436,15 +447,25 @@ a {
     background: transparent;
     border: 0;
     border-bottom: 3px solid #13151b;
-    padding: 10px 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    padding-left: 100px;
     font-size: 17px;
-    text-align: center;
-    width: 300px;
+    text-align: right;
+    width: 400px;
 }
 
 .custom-input i {
     position: absolute;
     right: 0.5em;
+    top: 0.7em;
+    font-size: 20px;
+}
+
+.custom-input button {
+    position: absolute;
+    left: 0.5em;
     top: 0.7em;
     font-size: 20px;
 }
@@ -552,6 +573,7 @@ a {
     margin: 0 4px;
     cursor: pointer;
 }
+
 .film-sorting-items {
     display: flex;
 }
@@ -817,6 +839,16 @@ a {
     width: 100%;
 }
 
+.search-btn {
+    margin: auto;
+}
+
+.search-btn button {
+    font-size: 12px !important;
+}
+.search-btn input{
+    font-size: 14px;
+}
 @import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700";
 .rwd-table {
     margin: 1em 0;
@@ -1116,11 +1148,13 @@ select {
         margin-right: 0;
         width: 100%;
     }
+
     .film-content {
         width: 100%;
-         margin-right: 0px;
+        margin-right: 0px;
         margin-top: 1em;
     }
+
     .film {
         flex-direction: column;
         height: 100%;
@@ -1283,6 +1317,7 @@ select {
         -webkit-transform-origin: 8px;
         transform-origin: 8px;
     }
+
     .film {
         width: 100%;
     }
@@ -1295,18 +1330,28 @@ select {
         align-items: center;
     }
 
-    .slide-title{
+    .slide-title {
         padding: 0 5px;
     }
+
     .slider-title h1 {
         font-size: 20px;
     }
+
     .slider-title button {
         margin-top: 2em;
         width: 160px;
     }
+
     .slider-footer {
         margin-right: 1em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
     }
 }
 
@@ -1314,29 +1359,36 @@ select {
     .film-sorting {
         font-size: 14px;
     }
+
     .film-sort-item {
         margin: 0 4px;
         font-size: 13px;
     }
 }
+
 @media screen and (max-width: 400px) {
     .header-logo img {
         width: 50px;
         height: 50px;
     }
+
     .cell {
         height: 200px;
     }
-    .slide-title{
+
+    .slide-title {
         padding: 0 5px;
         font-size: 12px;
     }
+
     .dialog-small {
         width: 300px;
     }
+
     h1 {
         font-size: 22px;
     }
+
     h2 {
         font-size: 17px;
     }
@@ -1352,21 +1404,26 @@ select {
     .slider-title h1 {
         font-size: 18px;
     }
+
     .slider-title button {
         margin-top: 1em;
         width: 100px;
     }
+
     .slider-title button h2 {
-        font-size: 13px!important;
+        font-size: 13px !important;
     }
+
     .slider-title {
         margin-top: 25%;
     }
+
     .flickity-page-dots .dot {
         width: 7px;
         height: 7px;
         margin: 0 5px;
     }
+
     .film-sorting {
         flex-direction: column;
         justify-content: space-around;
@@ -1376,29 +1433,37 @@ select {
         display: flex;
         justify-content: center;
     }
+
     .film-description {
         height: 190px;
     }
+
     .slider-footer h3 {
         font-size: 11px;
     }
+
     .slider-footer h4 {
         font-size: 9px;
     }
+
     .film-name {
         font-size: 22px;
     }
+
     .film-genre span {
         font-size: 15px;
         color: #a9aeb0;
     }
+
     .film-score {
         font-size: 18px;
         padding: 5px 18px 0px;
     }
+
     .film-detail-name {
         font-size: 22px;
     }
+
     .film-detail-score {
         font-size: 18px;
         padding: 5px 18px 0px;

@@ -17,15 +17,20 @@
                 </ul>
             </nav>
             <div class="header">
+                <div class="custom-input search-btn">
+                    <input type="text"  v-on:keyup.enter="search()" v-model="searchText" placeholder="نام فیلم را وارد کنید.."/>
+                    <i class="fa fa-search text-grey"></i>
+                    <button class="btn btn-transparent" @click="search()">جستجو</button>
+                </div>
                 <div class="header-logo">
+                    <a class="mobile-menu-toggle js-toggle-menu hamburger-menu" href="#" @click="toggleMenu()"  v-bind:class="{open:toggledMenu}">
+                        <span class="menu-item"></span>
+                        <span class="menu-item"></span>
+                        <span class="menu-item"></span>
+                    </a>
                     <router-link tag="a" to="/"><img src="../../assets/img/logo.png"/></router-link>
                     <router-link tag="a" to="/"><h1>{{title}}</h1></router-link>
                 </div>
-                <a class="mobile-menu-toggle js-toggle-menu hamburger-menu" href="#" @click="toggleMenu()"  v-bind:class="{open:toggledMenu}">
-                    <span class="menu-item"></span>
-                    <span class="menu-item"></span>
-                    <span class="menu-item"></span>
-                </a>
             </div>
             <div class="main-section">
                 <div class="side-bar">
@@ -80,6 +85,7 @@
         data() {
             return {
                 toggledMenu: false,
+                searchText: '',
                 title:'',
                 social: {
                     "instagram":"#",
@@ -103,6 +109,13 @@
         methods: {
             toggleMenu: function () {
                 this.toggledMenu = ! this.toggledMenu;
+            },
+            search(){
+                if(this.searchText.trim().length === 0){
+                    this.$swal('خطا','لطفا متن جستجو را وارد کنید','warning');
+                    return;
+                }
+                this.$router.push({ name: 'search', params: { query: this.searchText } })
             },
             initialize: function(){
                 this.title = document.getElementById('siteTitle').value;
