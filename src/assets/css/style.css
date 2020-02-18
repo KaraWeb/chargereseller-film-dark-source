@@ -1118,7 +1118,9 @@ select {
         margin-top: 0;
         padding: 15px;
     }
-
+    .header-logo{
+        width: 100%;
+    }
     .film-detail-image {
         display: none;
     }
@@ -1167,6 +1169,9 @@ select {
     .purchase-verify {
         margin-top: 60px;
     }
+    .search-btn input{
+        width: 100% !important;
+    }
 }
 
 .hamburger-menu {
@@ -1178,7 +1183,10 @@ select {
     .side-bar {
         display: none;
     }
-
+    .header {
+        flex-direction: column-reverse !important;
+        flex-wrap: wrap;
+    }
     .purchase-verify {
         width: 100%;
     }
@@ -1329,7 +1337,10 @@ select {
         height: auto;
         align-items: center;
     }
-
+    .header {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
     .slide-title {
         padding: 0 5px;
     }
@@ -1359,7 +1370,9 @@ select {
     .film-sorting {
         font-size: 14px;
     }
-
+    .search-btn input{
+        width: 100% !important;
+    }
     .film-sort-item {
         margin: 0 4px;
         font-size: 13px;
