@@ -170,7 +170,7 @@
                 this.$store.dispatch('updateRequesting', {status:true});
                 this.$store.dispatch('purchase', {
                     type: this.movie.type,
-                    id: this.movie.id,
+                    id: this.movie.type === 'series' ? this.movie.seasons[this.selectedSeason][this.selectedEpisode - 1]['id']:this.movie.id,
                     fileId: this.fileId,
                     cellphone: this.cellphone
                 })
