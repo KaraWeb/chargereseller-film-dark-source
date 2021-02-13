@@ -77,8 +77,7 @@
                             <select v-model="selectedEpisode">
                                 <option v-for="(episode,index) in movie.seasons[selectedSeason]"
                                         v-bind:selected="selectedEpisode === index+1" :value="index+1" :key="index+1">
-                                    قسمت
-                                    {{index+1}}
+                                    {{episode.nameFa}}
                                 </option>
                             </select>
                             <i class="fa fa-caret-down"></i>
