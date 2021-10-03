@@ -162,7 +162,7 @@
                 })
             },
             purchase: function () {
-                if (this.cellphone === null || this.cellphone.length !== 11 || !['093', '090', '091', '092'].includes(this.cellphone.substr(0,3))) {
+                if (this.cellphone === null || this.cellphone.length !== 11 || !['093', '090', '091', '092','099'].includes(this.cellphone.substr(0,3))) {
                     this.$swal('خطا', 'لطفا شماره موبایل خود را کامل و صحیح وارد کنید.', 'error');
                     return;
                 }
